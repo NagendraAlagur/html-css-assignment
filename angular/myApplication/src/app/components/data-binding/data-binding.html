@@ -1,0 +1,50 @@
+<table style="width: 100%">
+  <tr>
+    <td>
+      {{ courseName }}
+    </td>
+
+    <td>
+      {{ productPrice }}
+    </td>
+    <td>
+      <div>{{ courseName }}</div>
+    </td>
+  </tr>
+
+  <td>
+    <input type="text" value="{{ courseName }}" />
+  </td>
+
+  <td>
+    <input [type]="inputType" [max]="maxlength" [minLength]="minchar" />
+  </td>
+  <td>
+    <p [class]="myClassName">This is Sample Para</p>
+  </td>
+  <tr>
+    <td>
+      <button (click)="showWelcomeMessage()">Show message</button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <button (click)="changeCourseName()">Change course</button>
+    </td>
+  </tr>
+
+  <td>
+    <select (change)="onCityChange()">
+      <option value="">Pune</option>
+      <option value="">Nagapur</option>
+      <option value="">Mumbai</option>
+    </select>
+  </td>
+
+  <td>
+    <tr>
+      <input type="text" [(ngModel)]="courseName">
+    </tr>
+  </td>
+</table>
