@@ -8,7 +8,7 @@
       }
     </td>
     <td>
-      <button (click)="showP()">show P</button>
+      <button class="btn btn-primary" (click)="showP()">show P</button>
     </td>
     <td>
       <button (click)="hideP()">Hide P</button>
@@ -71,12 +71,11 @@
         <td>{{ item.name }}</td>
         <td>{{ item.city }}</td>
         <td>
-          @if ( item.isActive== true){
-                <h6>Active</h6>
-          } @else (){
+          @if (item.isActive == true) {
+            <h6>Active</h6>
+          } @else {
             <h6>De-Active</h6>
           }
-        
         </td>
       </tr>
     }
