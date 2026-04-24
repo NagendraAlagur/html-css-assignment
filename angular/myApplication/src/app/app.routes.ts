@@ -8,6 +8,7 @@ import { AttDirective } from './components/att-directive/att-directive';
 import { GetApi } from './get-api/get-api';
 import { ReactiveUser } from './components/reactive-user/reactive-user';
 import { PipeEx } from './components/pipe-ex/pipe-ex';
+import { ResourceApi } from './components/resource-api/resource-api';
 
 export const routes: Routes = [
 {
@@ -49,5 +50,9 @@ component: SignalEx
 {
   path:'pipe-ex',
   component:PipeEx
+},
+{
+  path:'resource-api',
+  component:ResourceApi
 }
 ];
