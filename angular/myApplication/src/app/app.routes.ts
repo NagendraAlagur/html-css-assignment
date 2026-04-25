@@ -9,50 +9,67 @@ import { GetApi } from './get-api/get-api';
 import { ReactiveUser } from './components/reactive-user/reactive-user';
 import { PipeEx } from './components/pipe-ex/pipe-ex';
 import { ResourceApi } from './components/resource-api/resource-api';
+import { Login } from './components/login/login';
+import { Layout } from './components/layout/layout';
 
 export const routes: Routes = [
-{
-  path:'Admin',
-  component:Admin
-},
-{
-  path:'control-flow',
-  component:ControlFlow
-},
-{
-  path:'data-binding',
-  component:DataBinding
-},
-{
-path: 'signal-ex',
-component: SignalEx
-},
-{
-  path:'user',
-  component:User
-},
-{
-  path:'Attribute-dir',
-  component:AttDirective
-},
-{
-  path:'get-api',
-  component:GetApi
-},
-{
-  path:'User',
-  component:User
-},
-{
-  path:'reactiv-user',
-  component:ReactiveUser
-},
-{
-  path:'pipe-ex',
-  component:PipeEx
-},
-{
-  path:'resource-api',
-  component:ResourceApi
-}
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: Login,
+  },
+  {
+    path: '',
+    component: Layout,
+    children: [
+      {
+        path: 'Admin',
+        component: Admin,
+      },
+      {
+        path: 'control-flow',
+        component: ControlFlow,
+      },
+      {
+        path: 'data-binding',
+        component: DataBinding,
+      },
+      {
+        path: 'signal-ex',
+        component: SignalEx,
+      },
+      {
+        path: 'user',
+        component: User,
+      },
+      {
+        path: 'Attribute-dir',
+        component: AttDirective,
+      },
+      {
+        path: 'get-api',
+        component: GetApi,
+      },
+      {
+        path: 'User',
+        component: User,
+      },
+      {
+        path: 'reactiv-user',
+        component: ReactiveUser,
+      },
+      {
+        path: 'pipe-ex',
+        component: PipeEx,
+      },
+      {
+        path: 'resource-api',
+        component: ResourceApi,
+      },
+    ],
+  },
 ];

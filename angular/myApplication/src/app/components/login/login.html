@@ -1,0 +1,42 @@
+<div class="container d-flex justify-content-center align-items-center h-100">
+  <div class="col-md-4">
+
+    <div class="login-card">
+
+      <!-- Title -->
+      <h3 class="text-center login-title mb-4">Login</h3>
+
+      <!-- Form -->
+      <form>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" [(ngModel)]="loginObj.userName" name="userName" class="form-control" placeholder="Enter your email">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" [(ngModel)]="loginObj.password" name="password" class="form-control" placeholder="Enter password">
+        </div>
+
+       
+
+        <!-- Button -->
+        <div class="d-grid">
+          <button type="button" class="btn btn-primary btn-custom" (click)="onLogin()">Login</button>
+        </div>
+
+        <!-- Register -->
+        <div class="text-center mt-3 small-text">
+          Don’t have an account?
+          <a href="#" class="text-decoration-none">Register</a>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>  
