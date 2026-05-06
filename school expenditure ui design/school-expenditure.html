@@ -1,0 +1,136 @@
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <title>school-expenditure</title>
+  <link rel="stylesheet" href="school-expenditure.css">
+  </head>
+
+
+  <body>
+    <div class="card">
+      <div class="card-box">
+        <span>Total expenditure</span>
+        <h3>₹100000</h3>
+      </div>
+      <div class="card-box">
+        <span>This Month</span>
+        <h3>₹25000</h3>
+      </div>
+      <div class="card-box">
+        <span>Today's Expenses</span>
+        <h3>₹ 10000</3>
+      </div>
+    </div>
+
+    <div class="card-body">
+
+       <div class="add-expense"> 
+        <h>Title</h> <br> 
+        <input type="text" placeholder="Enter title">
+       </div>
+         <div class="add-expense"> 
+        <h>Amount(₹)</h> <br>
+        <input type="text" placeholder="Enter Amount">
+       </div>
+
+       <div class="add-expense"> 
+        <h>Date</h> <br>
+        <input type="date">
+       </div>
+
+        <div class="add-expense"> 
+        <h>Description</h> <br>
+        <input type="text">
+       </div>
+    </div>
+
+  </body>
+</html>-->
+
+
+<div class="expenditure-container">
+  <c-breadcrumb class="mb-3">
+    <c-breadcrumb-item>
+      <a routerLink="/dashboard">Dashboard</a>
+    </c-breadcrumb-item>
+    <c-breadcrumb-item active>School-expenditure</c-breadcrumb-item>
+  </c-breadcrumb>
+
+  <div class="expenditures-header">
+    <div class="breadcrumb-title">
+      <h4>school-expenditure</h4>
+      <p>Track and manage school-expenditure</p>
+    </div>
+  </div>
+
+  <!-- Summary Cards -->
+  <div class="expenditure-summary">
+    <div class="expenditure-box total">
+      <span>Total Expenditure</span>
+      <!--  <h3>{{ totalCollection }}</h3>-->
+    </div>
+
+    <div class="expenditure-box">
+      <span>This Month</span>
+      <!--  <h3>{{ totalCash }}</h3>-->
+    </div>
+
+    <div class="expenditure-box">
+      <span>Todays Expense</span>
+      <!--  <h3>{{ totalUPI }}</h3>-->
+    </div>
+  </div>
+  <div class="button-right">
+    <button class="btn btn-primary btn-sm">Add Expenditure</button>
+  </div>
+
+  <div
+    @for
+    (item
+    of
+    filteredExpenditureList;
+    track
+    $index)
+    class="alert alert-info text-center mt-4"
+  >
+    No expenditure add list found!
+  </div>
+
+  <div>
+    <div>
+      <h5>Add Expenditure List</h5>
+    
+    </div>
+
+  </div>
+
+ <!--div>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h5 class="mb-0">Expenditure List</h5>
+
+      <input
+        type="text"
+        class="form-control form-control-sm w-25"
+        placeholder="Search..."
+        [(ngModel)]="searchText"
+        (input)="onSearch()"
+      />
+
+      <select
+        class="form-select form-select-sm w-25"
+        [(ngModel)]="selectedFilter"
+        (change)="onFilterChange()"
+      >
+        <option value="all">All</option>
+        <option value="today">Today</option>
+        <option value="month">This Month</option>
+        <option value="year">This Year</option>
+      </select>
+    </div>
+  </div>--> 
+</div>
+
+
+
+  <button class="btn btn-outline-primary btn-sm me-1">✏️</button>
+              <button class="btn btn-outline-danger btn-sm">🗑️</button>

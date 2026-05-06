@@ -1,0 +1,109 @@
+
+/*body {
+ margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  background-color: #fefefe;
+}
+.card{
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+  gap: 20px;
+  margin: 50px;
+  max-width: 900px;
+  }
+
+  .card-box{
+    background: #dce2e8;
+    padding: 20px;
+    border-radius:10px;
+    transition: 0.3s;
+  }
+
+
+.card > div {
+  flex: 1;                
+  min-height: 100px;       
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;     
+
+  padding: 15px;
+  border-radius: 8px;
+
+
+  text-align: center;
+}
+
+  .card h3 {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.card-body{
+ max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.add-expense{
+
+}*/
+
+.expenditure-container {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.expenditures-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.breadcrumb-title h4 {
+    margin: 0;
+    font-weight: 600;
+} 
+.breadcrumb-title p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+} 
+.expenditure-summary {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+.expenditure-box {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+.expenditure-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.expenditure-box.total {
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    color: white;
+}
+.expenditure-box h3 {
+    margin: 5px 0 0;
+    font-weight: 600;
+}
+.button-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}

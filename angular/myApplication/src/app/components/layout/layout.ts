@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Master } from '../services/master';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -11,6 +11,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 export class Layout {
 
     loggedUserName: string = '';
+    router= inject(Router)
   
     constructor(private masterService: Master) {
       this.readloggedData();
@@ -27,8 +28,9 @@ export class Layout {
     }
   
     onLoggOff(){
-      localStorage.removeItem("angular20User")
+      localStorage.getItem('angular20User');
       this.readloggedData();
       this.loggedUserName='';
+      this.router.navigateByUrl('/login')
     }
 }

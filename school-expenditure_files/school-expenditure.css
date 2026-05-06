@@ -1,0 +1,12 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+}
+.card{
+
+ display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}

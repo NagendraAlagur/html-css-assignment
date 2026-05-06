@@ -6,8 +6,8 @@ import { NonNullAssert } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
+  imports: [RouterOutlet],  
+  template: `<router-outlet></router-outlet>`,
   styleUrl: './app.css',
 })
 export class App {
